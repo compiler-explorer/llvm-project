@@ -183,9 +183,8 @@ raw_ostream &llvm::dbgs() {
 #else
 // Avoid "has no symbols" warning.
 namespace llvm {
-  /// dbgs - Return errs().
   raw_ostream &dbgs() {
-    return errs();
+    return bufferederrs();
   }
 }
 void llvm::initDebugOptions() {}

@@ -585,6 +585,8 @@ raw_fd_ostream &outs();
 /// expected place.
 raw_fd_ostream &errs();
 
+raw_fd_ostream &bufferederrs();
+
 /// This returns a reference to a raw_ostream which simply discards output.
 raw_ostream &nulls();
 
