@@ -889,9 +889,7 @@ raw_fd_ostream &llvm::outs() {
 }
 
 raw_fd_ostream &llvm::bufferederrs() {
-  std::error_code EC;
-  static raw_fd_ostream S(STDERR_FILENO, EC, sys::fs::OF_None);
-  assert(!EC);
+  static raw_fd_ostream S(STDERR_FILENO, false, false);
   return S;
 }
 
